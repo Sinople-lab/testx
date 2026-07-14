@@ -1,6 +1,6 @@
 // 1. Import Appwrite directly into your browser tab
-import { Client, Databases, ID } from 'https://jsdelivr.net';
-//import { Client, Databases, ID } from 'https://unpkg.com';
+//import { Client, Databases, ID } from 'https://jsdelivr.net';
+import { Client, Databases, ID } from 'https://unpkg.com';
 
 // 2. Initialize your local Appwrite connection
 const client = new Client()
