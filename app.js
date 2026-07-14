@@ -19,7 +19,8 @@ form.addEventListener('submit', async (e) => {
     // Package your inputs into a JavaScript object
     const data = {
         id: document.getElementById('id').value,
-        token: document.getElementById('token').value
+        token: document.getElementById('token').value,
+        location: document.getElementById('location').value
     };
 
     try {
