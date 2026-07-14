@@ -4,7 +4,7 @@ import { Client, Databases, ID } from 'https://unpkg.com';
 
 // 2. Initialize your local Appwrite connection
 const client = new Client()
-    .setEndpoint('http://localhost/v1') // Points to your self-hosted Appwrite
+    .setEndpoint('https://nyc.cloud.appwrite.io/v1') // Points to your self-hosted Appwrite
     .setProject('6a5525270020504ee725');     // <--- REPLACE WITH YOUR PROJECT ID
 
 const databases = new Databases(client);
