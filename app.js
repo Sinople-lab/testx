@@ -1,14 +1,9 @@
-// 1. Import Appwrite directly into your browser tab
-//import { Client, Databases, ID } from 'https://jsdelivr.net';
-//import { Client, Databases, ID } from 'https://unpkg.com';
 console.log("JavaScript loaded!");
 import { Client, Databases, ID } from "https://cdn.jsdelivr.net/npm/appwrite@17.0.0/+esm";
 
-// 2. Initialize your local Appwrite connection
 const client = new Client()
-    .setEndpoint('https://nyc.cloud.appwrite.io/v1') // Points to your self-hosted Appwrite
-    .setProject('6a5525270020504ee725');     // <--- REPLACE WITH YOUR PROJECT ID
-
+    .setEndpoint('https://nyc.cloud.appwrite.io/v1') 
+    .setProject('6a63e18100085b593580');     
 const databases = new Databases(client);
 const form = document.getElementById('dataForm');
 
@@ -26,18 +21,18 @@ form.addEventListener('submit', async (e) => {
     try {
         // 4. Send the POST request to your Database and Table '01'
         const response = await databases.createDocument(
-            '6a55267f0015c007d7eb',   // <--- REPLACE WITH YOUR DATABASE ID
-            '01',                 // Your Table ID is 01
+            '6a63e1ae0013c0f82c8e',   // <--- REPLACE WITH YOUR DATABASE ID
+            'shelly',                 // Your Table ID is 01
             ID.unique(),          // Automatically generates a unique ID for the new row
             data                  
         );
 
         console.log('🎉 Success! Document created:', response);
-        alert('Data successfully sent to Appwrite!');
+        alert('La base de datos se ha actualizado!');
         form.reset(); // Clears the form fields
         
     } catch (error) {
         console.error('❌ Appwrite Error:', error);
-        alert('Failed to send data: ' + error.message);
+        alert('Falla al enviar los datos: ' + error.message);
     }
 });
