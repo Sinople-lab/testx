@@ -1,4 +1,4 @@
-console.log("JavaScript loaded!");
+console.log("loaded!");
 import { Client, Databases, ID } from "https://cdn.jsdelivr.net/npm/appwrite@17.0.0/+esm";
 
 const client = new Client()
